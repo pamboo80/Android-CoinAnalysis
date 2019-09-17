@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dp16"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingBottom="@dimen/dp16">
+
+        <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="@dimen/dp32"
+            android:layout_height="@dimen/dp32"
+            android:layout_marginEnd="@dimen/dp12"
+            android:background="@drawable/robot" />
+
+        <RelativeLayout
+            style="@style/regular_16sp_textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/userImageView"
+            android:background="@drawable/pink_round_border"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/coinImageView"
+                android:layout_width="@dimen/dp18"
+                android:layout_height="@dimen/dp18"
+                android:layout_marginEnd="@dimen/dp12"
+                />
+
+            <TextView
+                android:id="@+id/textCoinName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/coinImageView"
+                android:text="Bitcoin (BTC) " />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/detailTextView"
+        style="@style/bold_14_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textHolder"
+        android:background="@drawable/gradient_horizontal"
+        android:paddingBottom="@dimen/dp8"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingRight="@dimen/dp16"
+        android:paddingTop="@dimen/dp8"
+        android:text="Yearly Price Trend" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/yearlyPriceDetailHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="vertical"
+            android:showDividers="middle">
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

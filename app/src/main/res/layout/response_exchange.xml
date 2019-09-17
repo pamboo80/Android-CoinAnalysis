@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/dp16"
+    android:paddingLeft="@dimen/dp16"
+    android:layout_marginTop="@dimen/dp24">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/responseRelativeLayout"
+        android:layout_marginBottom="@dimen/dp16">
+        <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="@dimen/dp32"
+            android:layout_height="@dimen/dp32"
+            android:background="@drawable/robot"
+            android:layout_marginEnd="@dimen/dp12"/>
+        <TextView
+            android:id="@+id/exchangeDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/userImageView"
+            android:background="@drawable/pink_round_border"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            style="@style/regular_14sp_textColor"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pink_round_half_filled"
+        android:layout_below="@id/responseRelativeLayout"
+        android:paddingBottom="@dimen/dp8"
+        android:paddingEnd="@dimen/dp16"
+        android:paddingStart="@dimen/dp16"
+        android:paddingTop="@dimen/dp8"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/sort_exchange_textView"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:text="Exchange"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+
+        <TextView
+            android:id="@+id/sort_price_textView"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:text="Price"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+        <TextView
+            android:id="@+id/sort_volume_textView"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:text="Vol 24Hrs"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"
+            android:layout_weight="1.25"
+            android:gravity="right"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exchangeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTextView"
+        android:orientation="vertical"
+        android:background="@drawable/pink_round__bottom_border">
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,221 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp8"
+    tools:context="bangbit.in.coinanalysis.CoinDetailFragment.GeneralFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="?android:dividerHorizontal"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                android:id="@+id/price_lable_textView"
+                style="@style/bold_14_pink"
+                android:text="@string/price_usd" />
+
+            <TextView
+                android:id="@+id/price_usd"
+                style="@style/bold_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Price [BTC] :" />
+
+            <TextView
+                android:id="@+id/price_btc"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="24 Hrs Volume :" />
+
+            <TextView
+                android:id="@+id/hour_24_volume"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Market Cap :" />
+
+            <TextView
+                android:id="@+id/mcap"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Available Supply :" />
+
+            <TextView
+                android:id="@+id/available_supply"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Total Supply :" />
+
+            <TextView
+                android:id="@+id/total_supply"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Max Supply :" />
+
+            <TextView
+                android:id="@+id/max_supply"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Change 1 Hr :" />
+
+            <TextView
+                android:id="@+id/change_1_hour"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Change 24 Hrs :" />
+
+            <TextView
+                android:id="@+id/change_24_hour"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Change 7 Days :" />
+
+            <TextView
+                android:id="@+id/change_7_days"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Rank :" />
+
+            <TextView
+                android:id="@+id/rank"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_14_pink"
+                android:text="Last Updated On :" />
+
+            <TextView
+                android:id="@+id/last_updated"
+                style="@style/regular_14_textcolor"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="NA" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@drawable/gradient_horizontal"
+        app:contentInsetStart="@dimen/dp0"
+        app:titleTextAppearance="@style/ToolbarTextAppearance.Title">
+        <!--app:contentInsetStart="@dimen/dp0"-->
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="@dimen/dp56"
+            android:layout_height="@dimen/dp56"
+            android:background="@drawable/circuler_ripple"
+            android:padding="@dimen/dp16"
+            android:src="?android:attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp48"
+            android:singleLine="true"
+            android:text="ChatBot"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+
+        <ImageView
+            android:id="@+id/help_icon"
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_gravity="right"
+            android:background="@drawable/circuler_ripple"
+            android:padding="@dimen/dp16"
+            android:src="@drawable/help" />
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/reyclerview_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_chatbox"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp6"
+        ></android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/layout_chatbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:minHeight="48dp"
+        android:elevation="@dimen/dp4"
+        android:translationZ="@dimen/dp4"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edittext_chatbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Enter message"
+            android:maxLines="6"
+            android:textColor="@color/coin_header" />
+
+        <ImageButton
+            android:id="@+id/button_chatbox_send"
+            android:layout_width="@dimen/dp32"
+            android:layout_height="@dimen/dp32"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/dp8"
+            android:background="@drawable/circle_gradient"
+            android:padding="@dimen/dp8"
+            android:src="@drawable/send" />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar"></FrameLayout>
+
+</RelativeLayout>

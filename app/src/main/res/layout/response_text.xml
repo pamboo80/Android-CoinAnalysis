@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/responseRelativeLayout"
+    android:paddingLeft="@dimen/dp16"
+    android:paddingRight="@dimen/dp16">
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="@dimen/dp32"
+        android:layout_height="@dimen/dp32"
+        android:background="@drawable/robot"
+        android:layout_marginEnd="@dimen/dp12"/>
+    <TextView
+        android:id="@+id/answerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/userImageView"
+        android:background="@drawable/pink_round_border"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        style="@style/regular_16sp_textColor"
+        android:text="Hi, I m your personal AI chatbot, How can I help you?"/>
+</RelativeLayout>

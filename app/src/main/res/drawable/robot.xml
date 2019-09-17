@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <shape android:shape="oval">
+            <gradient
+                android:angle="180"
+                android:endColor="@color/end_color"
+                android:startColor="@color/start_color" />
+            <size android:height="@dimen/dp56" android:width="@dimen/dp56"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/robot_icon" android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp">
+    </item>
+</layer-list>

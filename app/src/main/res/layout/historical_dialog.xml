@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/dp24">
+<LinearLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/left_image"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/arrow_left_pink"
+        android:padding="@dimen/dp16"/>
+    <LinearLayout
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/regular_16sp_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:text="Date" />
+
+            <TextView
+                style="@style/regular_16sp_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:text="Open" />
+
+            <TextView
+                style="@style/regular_16sp_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:text="High" />
+
+            <TextView
+                style="@style/regular_16sp_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:text="Low" />
+
+            <TextView
+                style="@style/regular_16sp_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:text="Close" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date_textView"
+                style="@style/regular_16sp_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:paddingLeft="@dimen/dp8" />
+
+            <TextView
+                android:id="@+id/open_textView"
+                style="@style/regular_16sp_textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:paddingLeft="@dimen/dp8" />
+
+            <TextView
+                android:id="@+id/high_textView"
+                style="@style/regular_16sp_textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:paddingLeft="@dimen/dp8" />
+
+            <TextView
+                android:id="@+id/low_textView"
+                style="@style/regular_16sp_textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:paddingLeft="@dimen/dp8" />
+
+            <TextView
+                android:id="@+id/close_textView"
+                style="@style/regular_16sp_textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp12"
+                android:paddingLeft="@dimen/dp8" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/right_image"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/right_arrow_pink"
+        android:padding="@dimen/dp16"/>
+</LinearLayout>
+    <TextView
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:minWidth="@dimen/dp80"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_below="@id/container"
+        android:background="@drawable/rounded_button_with_ripple"
+        android:clickable="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingRight="@dimen/dp16"
+        android:text="Cancel"
+        android:textColor="@color/coin_header"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/sp14" />
+</RelativeLayout>

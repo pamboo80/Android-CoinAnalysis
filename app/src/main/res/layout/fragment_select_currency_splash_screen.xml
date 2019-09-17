@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_vertical"
+    tools:context="bangbit.in.coinanalysis.SplashScreenFragment.SelectCurrencySplashScreenFragment">
+
+
+    <TextView
+        android:id="@+id/predict_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp54"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/sp24"
+        android:textColor="@color/white"
+        android:fontFamily="@font/rokkitt_bold"
+        android:text="@string/set_default_currency"/>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp4"
+        android:layout_below="@id/predict_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp9"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/white_corner_bg" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:layout_above="@id/curencyContainer">
+        <ImageView
+            android:id="@+id/center_image_predict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/currency_splash" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp55"
+        android:layout_marginRight="@dimen/dp55"
+        android:layout_marginBottom="@dimen/dp35"
+        android:layout_above="@id/ok_Button"
+        android:background="@drawable/divider_line_white"
+        android:orientation="vertical"
+        android:id="@+id/curencyContainer">
+
+        <TextView
+            android:id="@+id/currency_textView"
+            style="@style/regular_16sp_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="@dimen/dp8"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@android:color/transparent"
+            android:dropDownVerticalOffset="@dimen/dp0"
+            android:hint="Select Crypto Currency"
+            android:text="United States Dollar (USD)"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ok_Button"
+        android:layout_width="@dimen/dp82"
+        android:layout_height="@dimen/dp30"
+        android:layout_above="@+id/detail_text"
+        android:layout_alignEnd="@+id/curencyContainer"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/rounded_transperent_white_border_button"
+        android:fontFamily="@font/rokkitt_bold"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="OK"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/detail_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp24"
+        android:layout_marginRight="@dimen/dp24"
+        android:layout_marginBottom="@dimen/dp50"
+        android:lineSpacingExtra="@dimen/sp4"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textColor="@color/white_with_opacity"
+        android:fontFamily="@font/rokkitt_regular"
+        android:text="Note: This can be changed in the App Settings anytime."/>
+
+</RelativeLayout>

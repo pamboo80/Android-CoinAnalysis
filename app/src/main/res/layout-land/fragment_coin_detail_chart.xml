@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="bangbit.in.coinanalysis.CoinDetailFragment.ChartFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/percentage_container"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/bold_16sp_pink"
+            android:text="@string/Price"
+            android:layout_marginEnd="@dimen/dp4"/>
+        <TextView
+            android:id="@+id/price_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/bold_16_textColor"
+            android:text=": NA"
+            android:singleLine="true"
+            android:layout_marginEnd="@dimen/dp4"
+            />
+        <TextView
+            android:id="@+id/profit_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/bold_16_textColor"
+            android:textColor="@color/green"
+            android:text="(0.00%)"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/tryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/percentage_container"
+        android:layout_above="@id/filter_button_container"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+        <TextView
+            style="@style/bold_14_pink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="No data available." />
+        <TextView
+            android:id="@+id/try_again_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_gravity="center"
+            android:textSize="@dimen/sp14"
+            android:paddingTop="@dimen/dp6"
+            android:paddingBottom="@dimen/dp6"
+            android:paddingLeft="@dimen/dp8"
+            android:paddingRight="@dimen/dp8"
+            android:minWidth="@dimen/dp0"
+            android:minHeight="@dimen/dp0"
+            android:textAllCaps="false"
+            android:fontFamily="@font/rokkitt_bold"
+            android:background="@drawable/button_white_border_ripple"
+            android:textColor="@color/textColor"
+            android:text="Try again" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/percentage_container"
+        android:layout_above="@id/filter_button_container"
+        android:gravity="center_vertical|center_horizontal">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_below="@id/percentage_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/filter_button_container"
+        android:layout_marginBottom="@dimen/dp16" />
+
+
+    <LinearLayout
+        android:id="@+id/filter_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp28"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp8"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/hour24Button"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_pink_unfilled_button"
+            android:fontFamily="@font/rokkitt_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="24 Hours"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/day7Button"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_pink_unfilled_button"
+            android:fontFamily="@font/rokkitt_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/_7_day"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/month1Button"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_pink_unfilled_button"
+            android:fontFamily="@font/rokkitt_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="1 Month"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+
+
+        <TextView
+            android:id="@+id/month3Button"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_pink_unfilled_button"
+            android:fontFamily="@font/rokkitt_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="3 Months"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/year1Button"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_pink_unfilled_button"
+            android:fontFamily="@font/rokkitt_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="1 Year"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+
+
+        <TextView
+            android:id="@+id/allButton"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_pink_unfilled_button"
+            android:fontFamily="@font/rokkitt_bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="All"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+
+    </LinearLayout>
+
+</RelativeLayout>

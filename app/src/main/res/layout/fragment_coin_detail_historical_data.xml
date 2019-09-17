@@ -1,0 +1,230 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="bangbit.in.coinanalysis.CoinDetailFragment.HistoricalDataFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp8"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="From"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp12" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider_line">
+
+                <TextView
+                    android:id="@+id/start_date_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp42"
+                    android:backgroundTint="@android:color/transparent"
+                    android:drawableEnd="@drawable/calander"
+                    android:drawablePadding="@dimen/dp8"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minWidth="@dimen/dp125"
+                    android:text="NA"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp12"
+                android:layout_marginRight="@dimen/dp8"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="To"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp12" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider_line">
+
+                <TextView
+                    android:id="@+id/end_date_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp42"
+                    android:backgroundTint="@android:color/transparent"
+                    android:drawableEnd="@drawable/calander"
+                    android:drawablePadding="@dimen/dp8"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minWidth="@dimen/dp125"
+                    android:text="NA"
+
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_horizontal"
+        android:paddingBottom="@dimen/dp8"
+        android:paddingEnd="@dimen/dp16"
+        android:paddingStart="@dimen/dp16"
+        android:paddingTop="@dimen/dp8"
+        android:weightSum="5.2">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2">
+
+            <TextView
+                android:id="@+id/date_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="Date"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/open_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="Open"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/high_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="High"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/low_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="Low"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/close_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="Close"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_data_TextView"
+        style="@style/bold_14_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:gravity="center_horizontal"
+        android:text="@string/no_data_available"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/try_again_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp8"
+        android:background="@drawable/button_white_border_ripple"
+        android:fontFamily="@font/rokkitt_bold"
+        android:minHeight="@dimen/dp0"
+        android:minWidth="@dimen/dp0"
+        android:paddingBottom="@dimen/dp6"
+        android:paddingLeft="@dimen/dp8"
+        android:paddingRight="@dimen/dp8"
+        android:paddingTop="@dimen/dp6"
+        android:text="Try again"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/sp14"
+        android:visibility="gone" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="@dimen/dp30"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/historical_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+</LinearLayout>

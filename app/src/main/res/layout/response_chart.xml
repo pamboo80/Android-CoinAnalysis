@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp16"
+    android:paddingRight="@dimen/dp16"
+    android:id="@+id/chartResponseView">
+
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="@dimen/dp32"
+        android:layout_height="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp12"
+        android:background="@drawable/robot" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/userImageView"
+        android:background="@drawable/pink_round_border"
+        android:paddingBottom="8dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="8dp"
+        style="@style/regular_16sp_textColor">
+
+        <ImageView
+            android:id="@+id/coinImageView"
+            android:layout_width="@dimen/dp18"
+            android:layout_height="@dimen/dp18"
+            android:layout_marginEnd="@dimen/dp12"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/coinImageView"
+            android:text="Bitcoin (BTC) Last 7 days chart for" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textHolder"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@drawable/pink_round_half_filled"
+        android:paddingBottom="8dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="8dp"
+        android:text="Price : $7952.58 "
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/chartHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priceTextView"
+        android:background="@drawable/pink_round__bottom_border"
+        android:orientation="vertical">
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></com.github.mikephil.charting.charts.LineChart>
+        <include layout="@layout/more_data_row"/>
+    </LinearLayout>
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/chartHolder"-->
+        <!--android:background="@drawable/pink_round_filled"-->
+        <!--android:paddingBottom="8dp"-->
+        <!--android:paddingLeft="24dp"-->
+        <!--android:paddingRight="24dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:text="Hint : Tap the chart for full view"-->
+        <!--android:textColor="@color/white" />-->
+
+</RelativeLayout>

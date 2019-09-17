@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@color/white">
+
+        <include layout="@layout/chat_date" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/responseRelativeLayout"
+            android:layout_marginBottom="@dimen/dp16"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16">
+
+            <ImageView
+                android:id="@+id/userImageView"
+                android:layout_width="@dimen/dp32"
+                android:layout_height="@dimen/dp32"
+                android:background="@drawable/robot"
+                android:layout_marginEnd="@dimen/dp12" />
+
+            <TextView
+                style="@style/regular_16sp_textColor"
+                android:id="@+id/exchangeDetailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/userImageView"
+                android:background="@drawable/pink_round_border"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buy_sell_header"
+            android:background="@drawable/gradient_horizontal"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingEnd="@dimen/dp16"
+            android:paddingStart="@dimen/dp16"
+            android:paddingTop="@dimen/dp8"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sort_exchange_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:gravity="center_vertical"
+                    android:text="Exchange"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.25"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sort_price_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:gravity="center_vertical"
+                    android:text="Price"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.25"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sort_volume_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:text="@string/vol_24hrs"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/where_to_buy_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

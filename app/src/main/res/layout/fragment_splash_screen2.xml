@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_vertical"
+    android:orientation="vertical"
+    tools:context="bangbit.in.coinanalysis.SplashScreenFragment.SplashScreen1Fragment">
+
+    <TextView
+        android:id="@+id/predict_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp54"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/sp24"
+        android:textColor="@color/white"
+        android:fontFamily="@font/rokkitt_bold"
+        android:text="@string/percentage_change_filter"/>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp4"
+        android:layout_below="@id/predict_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp9"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/white_corner_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:layout_above="@id/detail_text">
+
+    <ImageView
+        android:id="@+id/center_image_predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/predict"
+        android:layout_marginTop="@dimen/dp83"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/detail_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp24"
+        android:layout_marginRight="@dimen/dp24"
+        android:layout_marginBottom="@dimen/dp105"
+        android:lineSpacingExtra="@dimen/sp4"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/rokkitt_regular"
+        android:text="Using this filter you can check which crypto coins have seen maximum rise in past 1 hour and 24 hours and in a week's time."/>
+
+</RelativeLayout>

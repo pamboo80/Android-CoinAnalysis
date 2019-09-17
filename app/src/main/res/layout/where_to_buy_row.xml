@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/where_to_buy_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp16"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/exchange_ImageView"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_marginRight="@dimen/dp8"
+            android:background="@drawable/default_coin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/exchange_name"
+                style="@style/bold_14_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp4"
+                android:singleLine="true"
+                tool:text="OKEx" />
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="@dimen/sp14"-->
+            <!--android:text="Vol % : 55.24"/>-->
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--<TextView-->
+    <!--android:id="@+id/exchange_pair"-->
+    <!--style="@style/regular_14sp_textColor"-->
+    <!--android:layout_width="@dimen/dp0"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="ETH/BTC" />-->
+
+    <LinearLayout
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.25"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/regular_14sp_textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            tool:text="$8950.35" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.25"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/volume_24_hour"
+        style="@style/regular_14sp_textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.25"
+        android:gravity="right|center_vertical"
+        tool:text="1836" />
+    </LinearLayout>
+
+</LinearLayout>

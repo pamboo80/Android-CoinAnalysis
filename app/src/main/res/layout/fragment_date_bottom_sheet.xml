@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="right"
+        android:paddingEnd="@dimen/dp16"
+        android:paddingTop="@dimen/dp16">
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/dp80"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp16"
+            android:background="@drawable/rounded_button_with_ripple"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/dp80"
+            android:layout_height="@dimen/dp30"
+            android:background="@drawable/rounded_button_with_ripple"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingEnd="@dimen/dp16"
+        android:paddingTop="@dimen/dp16">
+
+        <bangbit.in.coinanalysis.BottomSheetPair.NumberPicker
+            android:id="@+id/date_number_picker"
+            android:layout_width="@dimen/dp72"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@android:color/transparent"
+            app:np_fadingEdgeEnabled="false"
+            app:np_height="180dp"
+            app:np_max="31"
+            app:np_min="1"
+            app:np_selectedTextColor="@color/coin_header"
+            app:np_selectedTextSize="@dimen/sp16"
+            app:np_textColor="@color/colorPrimary"
+            app:np_textSize="@dimen/sp16"
+            app:np_wheelItemCount="5"
+            app:np_width="64dp" />
+
+        <bangbit.in.coinanalysis.BottomSheetPair.NumberPicker
+            android:id="@+id/month_number_picker"
+            android:layout_width="@dimen/dp72"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@android:color/transparent"
+            app:np_fadingEdgeEnabled="false"
+            app:np_height="180dp"
+            app:np_max="12"
+            app:np_min="1"
+            app:np_selectedTextColor="@color/coin_header"
+            app:np_selectedTextSize="@dimen/sp16"
+            app:np_textColor="@color/colorPrimary"
+            app:np_textSize="@dimen/sp16"
+            app:np_wheelItemCount="5"
+            app:np_width="64dp" />
+
+        <bangbit.in.coinanalysis.BottomSheetPair.NumberPicker
+            android:id="@+id/year_number_picker"
+            android:layout_width="@dimen/dp72"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@android:color/transparent"
+            app:np_fadingEdgeEnabled="false"
+            app:np_height="180dp"
+            app:np_selectedTextColor="@color/coin_header"
+            app:np_selectedTextSize="@dimen/sp16"
+            app:np_textColor="@color/colorPrimary"
+            app:np_textSize="@dimen/sp16"
+            app:np_wheelItemCount="5"
+            app:np_width="64dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

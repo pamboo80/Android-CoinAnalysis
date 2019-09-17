@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dp16"
+    android:paddingRight="@dimen/dp16"
+    android:id="@+id/responseDetailView">
+
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="@dimen/dp32"
+        android:layout_height="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp12"
+        android:background="@drawable/robot" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/userImageView"
+        android:background="@drawable/pink_round_border"
+        android:paddingBottom="8dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="8dp"
+        style="@style/regular_16sp_textColor">
+
+        <ImageView
+            android:id="@+id/coinImageView"
+            android:layout_width="@dimen/dp18"
+            android:layout_height="@dimen/dp18"
+            android:layout_marginEnd="@dimen/dp12"
+            />
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/coinImageView"
+            android:text="Bitcoin (BTC) " />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/detailTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textHolder"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@drawable/pink_round_half_filled"
+        android:paddingBottom="8dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="8dp"
+        android:text="Detail"
+        style="@style/bold_14_white"/>
+
+    <LinearLayout
+        android:id="@+id/detailHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailTextView"
+        android:layout_marginBottom="@dimen/dp8"
+        android:divider="?android:dividerHorizontal"
+        android:showDividers="middle"
+        android:background="@drawable/pink_round__bottom_border"
+        android:orientation="vertical">
+
+        <include layout="@layout/more_data_row"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

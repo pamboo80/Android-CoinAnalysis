@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/dp24"
+    android:paddingLeft="@dimen/dp16"
+    android:paddingRight="@dimen/dp16">
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="@dimen/dp32"
+        android:layout_height="@dimen/dp32"
+        android:background="@drawable/robot"
+        android:layout_marginEnd="@dimen/dp12"/>
+    <com.bhargavms.dotloader.DotLoader
+        android:id="@+id/text_dot_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp24"
+        android:layout_toRightOf="@id/userImageView"
+        app:dot_radius="4dp"
+        app:color_array="@array/dot_colors_pink"
+        app:number_of_dots="3"/>
+
+
+</LinearLayout>

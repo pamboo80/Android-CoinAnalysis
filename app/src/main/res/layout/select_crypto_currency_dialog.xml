@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dp24">
+
+
+    <TextView
+        android:id="@+id/lable_currency"
+        style="@style/bold_20sp_pink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginBottom="@dimen/dp8"
+        android:text="Choose Crypto Currency" />
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lable_currency"
+        android:layout_marginLeft="@dimen/dp4"
+        android:background="@drawable/divider_line"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="@dimen/dp12"
+            android:background="@drawable/search_pink" />
+
+        <EditText
+            android:id="@+id/search_EditText"
+            style="@style/regular_16sp_textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/Search"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_data_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_container"
+        android:layout_marginTop="@dimen/dp24"
+        android:text="No data available."
+        android:gravity="center"
+        android:visibility="gone"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/currency_RecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cancelButton"
+        android:layout_below="@id/search_container"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp24"/>
+
+    <TextView
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:minWidth="@dimen/dp80"
+        android:layout_height="@dimen/dp30"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="@dimen/dp16"
+        android:background="@drawable/rounded_button_with_ripple"
+        android:clickable="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingRight="@dimen/dp16"
+        android:text="Cancel"
+        android:textColor="@color/coin_header"
+        android:textSize="@dimen/sp14" />
+
+
+</RelativeLayout>

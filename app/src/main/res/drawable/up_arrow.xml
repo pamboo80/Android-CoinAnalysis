@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp"
+        android:bottom="8dp">
+        <rotate  android:fromDegrees="180"
+            android:toDegrees="90"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:drawable="@drawable/down"
+           />
+
+    </item>
+</layer-list>

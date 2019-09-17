@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp24">
+
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="@dimen/dp32"
+        android:layout_height="@dimen/dp32"
+        android:layout_marginLeft="@dimen/dp16"
+        android:background="@drawable/robot" />
+
+    <LinearLayout
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/userImageView"
+        android:paddingLeft="@dimen/dp12"
+        android:paddingRight="@dimen/dp16"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pink_round_border"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/sp16"
+            style="@style/regular_16sp_textColor"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/exchangeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/textContainer"></LinearLayout>
+
+
+</RelativeLayout>

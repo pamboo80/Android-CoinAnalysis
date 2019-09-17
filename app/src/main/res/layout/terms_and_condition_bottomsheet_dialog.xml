@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp16">
+
+        <!--<TextView
+            style="@style/bold_16sp_pink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_and_conditions" />-->
+
+        <TextView
+            style="@style/regular_16sp_textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal|end|start"
+            android:text="@string/terms_and_conditions_text" />
+
+        <TextView
+            android:id="@+id/gotItButton"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp30"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_marginTop="@dimen/dp16"
+            android:background="@drawable/rounded_button_with_ripple"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Got It"
+            android:textAllCaps="false"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+</ScrollView>

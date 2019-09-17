@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chartResponseView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/chat_date" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="@dimen/dp32"
+            android:layout_height="@dimen/dp32"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:background="@drawable/robot" />
+
+        <RelativeLayout
+            android:id="@+id/textHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_toRightOf="@id/userImageView"
+            android:background="@drawable/pink_round_border"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/coinImageView"
+                android:layout_width="@dimen/dp24"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginEnd="@dimen/dp12"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/contentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/coinImageView"
+                style="@style/regular_16sp_textColor"
+                android:text="Bitcoin (BTC) Last 7 days chart for" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textHolder"
+        android:layout_marginTop="@dimen/dp24"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/percentage_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/bold_16sp_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp4"
+                android:text="Price" />
+
+            <TextView
+                android:id="@+id/price_textView"
+                style="@style/bold_16_textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp4"
+                android:singleLine="true"
+                android:text=": NA" />
+
+            <TextView
+                android:id="@+id/profit_textView"
+                style="@style/bold_16_textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0.00%)"
+                android:textColor="@color/green"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tryAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/percentage_container"
+            android:layout_above="@id/filter_button_container"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+            <TextView
+                style="@style/bold_14_pink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="No data available." />
+            <TextView
+                android:id="@+id/try_again_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_gravity="center"
+                android:textSize="@dimen/sp14"
+                android:paddingTop="@dimen/dp6"
+                android:paddingBottom="@dimen/dp6"
+                android:paddingLeft="@dimen/dp8"
+                android:paddingRight="@dimen/dp8"
+                android:minWidth="@dimen/dp0"
+                android:minHeight="@dimen/dp0"
+                android:textAllCaps="false"
+                android:fontFamily="@font/rokkitt_bold"
+                android:background="@drawable/button_white_border_ripple"
+                android:textColor="@color/textColor"
+                android:text="Try again" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/percentage_container"
+            android:layout_above="@id/filter_button_container"
+            android:gravity="center_vertical|center_horizontal"
+            >
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/filter_button_container"
+            android:layout_below="@id/percentage_container"
+            android:layout_marginBottom="@dimen/dp16" />
+
+        <LinearLayout
+            android:id="@+id/filter_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/below_container"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:paddingBottom="@dimen/dp8"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/hour24Button"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_weight="1"
+                android:background="@drawable/pink_round_border"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="24 Hours"
+                android:textAllCaps="false"
+                android:fontFamily="@font/rokkitt_bold"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/day7Button"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_weight="1"
+                android:background="@drawable/pink_round_border"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="7 Days"
+                android:fontFamily="@font/rokkitt_bold"
+                android:textAllCaps="false"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/month1Button"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp4"
+                android:fontFamily="@font/rokkitt_bold"
+                android:layout_weight="1"
+                android:background="@drawable/pink_round_border"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="1 Month"
+                android:textAllCaps="false"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/below_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/dp8"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <TextView
+                android:id="@+id/month3Button"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp4"
+                android:fontFamily="@font/rokkitt_bold"
+                android:layout_weight="1"
+                android:background="@drawable/pink_round_border"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="3 Months"
+                android:textAllCaps="false"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/year1Button"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_weight="1"
+                android:background="@drawable/pink_round_border"
+                android:fontFamily="@font/rokkitt_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="1 Year"
+                android:textAllCaps="false"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14" />
+
+
+            <TextView
+                android:id="@+id/allButton"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_weight="1"
+                android:background="@drawable/pink_round_border"
+                android:fontFamily="@font/rokkitt_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="All"
+                android:textAllCaps="false"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

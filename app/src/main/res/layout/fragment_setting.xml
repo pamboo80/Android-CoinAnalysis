@@ -1,0 +1,124 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/setting_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar"
+        android:divider="?android:dividerHorizontal"
+        android:orientation="vertical"
+        android:showDividers="middle|end">
+
+
+        <TextView
+            style="@style/bold_14_pink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16"
+            android:text="General" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp16"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/currency_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:drawableRight="@drawable/right_arrow"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/bold_12sp_pink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Default Fiat Currency" />
+
+                <TextView
+                    android:id="@+id/currencyName_textView"
+                    style="@style/regular_16sp_textColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="United States Dollar (USD)" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/right_arrow" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/bold_14_pink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16"
+            android:text="About" />
+
+        <TextView
+            android:id="@+id/about_textView"
+            style="@style/regular_16sp_textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableRight="@drawable/right_arrow"
+            android:padding="@dimen/dp16"
+            android:text="About App" />
+
+        <TextView
+            android:id="@+id/share_textView"
+            style="@style/regular_16sp_textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableRight="@drawable/right_arrow"
+            android:padding="@dimen/dp16"
+            android:text="Share This App" />
+
+        <TextView
+            android:id="@+id/terms_and_condition_textView"
+            style="@style/regular_16sp_textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:drawableRight="@drawable/right_arrow"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp16"
+            android:text="Terms &amp; Conditions" />
+
+        <TextView
+            android:id="@+id/feed_back_textView"
+            style="@style/regular_16sp_textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/right_arrow"
+            android:padding="@dimen/dp16"
+            android:text="Feedback" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                style="@style/bold_12sp_pink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App Version" />
+
+            <TextView
+                style="@style/regular_16sp_textColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CoinAnalysis v1.2" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

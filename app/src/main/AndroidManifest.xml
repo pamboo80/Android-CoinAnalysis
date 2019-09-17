@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bangbit.in.coinanalysis">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity.MainActivity"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Chat.ChatActivity"/>
+
+        <activity
+            android:name=".ChatModule.ChatActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity
+            android:name=".SplashScreen.SplashScreenActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".TestActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+        <activity
+            android:name=".DetailActivity.DetailActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".EditAddInvestmentActivity.EditAddInvestmentActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".DashboardInvestmentActivity.DashInvestmentActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".DashBoardAddInvestment.DashAddEditInvestmentActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".CryptoToFiat.CryptoToFiatActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".BaseActivity" />
+        <activity
+            android:name=".Setting.SettingActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateHidden"/>
+    </application>
+
+</manifest>

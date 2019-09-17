@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bangbit.in.coinanalysis.MainActivity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@drawable/gradient_horizontal"
+            android:elevation="@dimen/dp2"
+            app:titleTextAppearance="@style/ToolbarTextAppearance.Title">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt_regular"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp24" />
+
+            <ImageView
+                android:id="@+id/my_Investment"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_marginRight="@dimen/dp4"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="right"
+                android:src="@drawable/my_investment" />
+
+            <ImageView
+                android:id="@+id/sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="right"
+                android:src="@drawable/sort" />
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchView"
+                style="@style/MySearchViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                app:queryHint="Search Coins"
+                app:searchIcon="@drawable/search_padding8" />
+        </android.support.v7.widget.Toolbar>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            style="@style/TabLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_toolbar"
+            android:background="@drawable/gradient_horizontal"
+            android:elevation="@dimen/dp2"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="@dimen/dp0"
+            app:tabPaddingStart="@dimen/dp0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tab_layout"
+            android:background="#fafafa"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/all_filter_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp2">
+
+                <include
+                    layout="@layout/filter_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp15" />
+
+                <ImageButton
+                    android:id="@+id/filter_button"
+                    android:layout_width="@dimen/dp75"
+                    android:layout_height="@dimen/dp25"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="@dimen/dp4"
+                    android:background="@drawable/white_corner_bg"
+                    android:elevation="@dimen/dp4"
+                    android:foregroundGravity="bottom"
+                    android:src="@drawable/filter_open" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/slow_network_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:gravity="center_horizontal"
+                    android:text="Something went wrong!" />
+
+                <TextView
+                    android:id="@+id/try_again_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:background="@drawable/button_white_border_ripple"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:minHeight="@dimen/dp0"
+                    android:minWidth="@dimen/dp0"
+                    android:paddingBottom="@dimen/dp6"
+                    android:paddingLeft="@dimen/dp8"
+                    android:paddingRight="@dimen/dp8"
+                    android:paddingTop="@dimen/dp6"
+                    android:text="Try again"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/main_activity_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_offline"
+            style="@style/bold_14_pink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:isScrollContainer="false"
+            android:text="@string/you_are_offline"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/chat_fab"
+        android:layout_width="@dimen/dp56"
+        android:layout_height="@dimen/dp56"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/dp16"
+        android:padding="@dimen/dp16"
+        android:clickable="true"
+        android:background="@drawable/circle_gradient"
+        android:src="@drawable/robot_icon" />
+
+</android.support.design.widget.CoordinatorLayout>
+

@@ -1,0 +1,288 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="bangbit.in.coinanalysis.WhereToBuy.WhereToBuyFragment">
+
+    <LinearLayout
+        android:id="@+id/buy_sell_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="Lowest Price"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/low_fiat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:singleLine="true"
+                    android:text="$"
+                    android:textSize="@dimen/sp24"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/low_price_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:singleLine="true"
+                    android:text="@string/na"
+                    android:textSize="@dimen/sp24" />
+
+                <TextView
+                    android:id="@+id/low_crypto"
+                    style="@style/bold_12sp_textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BTC"
+                    android:singleLine="true"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt_bold"
+                android:gravity="end"
+                android:text="Highest Price"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/high_fiat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:singleLine="true"
+                    android:text="$"
+                    android:textSize="@dimen/sp24"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/high_price_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rokkitt_bold"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:text="@string/na"
+                    android:textSize="@dimen/sp24"
+                    />
+
+                <TextView
+                    android:id="@+id/high_crypto"
+                    style="@style/bold_12sp_textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BTC"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp8"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp5">
+
+        <TextView
+            android:id="@+id/pair_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/dp8"
+            android:drawableRight="@drawable/down_arrow_pink"
+            android:fontFamily="@font/rokkitt_bold"
+            android:gravity="center_horizontal"
+            android:text="BTC/USD"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/low_on_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/pair_textView"
+            android:fontFamily="@font/rokkitt_bold"
+            android:text="NA"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/high_on_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pair_textView"
+            android:fontFamily="@font/rokkitt_bold"
+            android:gravity="end"
+            android:text="NA"
+            android:textColor="@color/coin_header"
+            android:textSize="@dimen/sp12" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buy_sell_header"
+        android:background="@drawable/gradient_horizontal"
+        android:paddingBottom="@dimen/dp8"
+        android:paddingEnd="@dimen/dp16"
+        android:paddingStart="@dimen/dp16"
+        android:paddingTop="@dimen/dp8"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sort_exchange_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/rokkitt_bold"
+                android:gravity="center_vertical"
+                android:text="Exchange"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.25"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sort_price_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt_bold"
+                android:gravity="center_vertical"
+                android:text="Price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.25"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sort_volume_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="@string/vol_24hrs"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_data_TextView"
+        style="@style/bold_14_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:gravity="center_horizontal"
+        android:text="@string/no_data_available"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/try_again_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_gravity="center"
+        android:textSize="@dimen/sp14"
+        android:paddingTop="@dimen/dp6"
+        android:paddingBottom="@dimen/dp6"
+        android:paddingLeft="@dimen/dp8"
+        android:paddingRight="@dimen/dp8"
+        android:minWidth="@dimen/dp0"
+        android:minHeight="@dimen/dp0"
+        android:textAllCaps="false"
+        android:fontFamily="@font/rokkitt_bold"
+        android:background="@drawable/button_white_border_ripple"
+        android:textColor="@color/textColor"
+        android:text="Try again"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp30"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/where_to_buy_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

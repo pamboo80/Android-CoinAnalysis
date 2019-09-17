@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
+    tools:context="bangbit.in.coinanalysis.DetailActivity.DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@drawable/gradient_horizontal"
+            android:elevation="@dimen/dp2"
+            app:contentInsetStart="@dimen/dp0"
+            app:titleTextAppearance="@style/ToolbarTextAppearance.Title">
+
+            <ImageView
+                android:id="@+id/back_imageView"
+                android:layout_width="@dimen/toolbar_height"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@drawable/circuler_ripple"
+                android:padding="@dimen/dp16"
+                android:src="?attr/actionModeCloseDrawable" />
+
+            <ImageView
+                android:id="@+id/coin_icon"
+                android:layout_width="@dimen/dp24"
+                android:layout_height="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/coin_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp48"
+                android:singleLine="true"
+                android:text="Ethereum"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp24" />
+
+            <ImageView
+                android:id="@+id/favorite_icon"
+                android:layout_width="@dimen/toolbar_height"
+                android:layout_height="@dimen/toolbar_height"
+                android:layout_gravity="right"
+                android:background="@drawable/circuler_ripple"
+                android:padding="@dimen/dp16"
+                android:src="@drawable/heart_unfilled_white" />
+        </android.support.v7.widget.Toolbar>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            style="@style/TabLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_toolbar"
+            android:background="@drawable/gradient_horizontal"
+            android:clipToPadding="false"
+            android:elevation="@dimen/dp2"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="@dimen/dp0"
+            app:tabPaddingStart="@dimen/dp0" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_activity_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_layout"
+
+            />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

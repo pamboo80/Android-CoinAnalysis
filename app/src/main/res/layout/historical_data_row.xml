@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp8"
+    android:paddingEnd="@dimen/dp16"
+    android:paddingStart="@dimen/dp16"
+    android:paddingTop="@dimen/dp8"
+    android:weightSum="5.2">
+
+    <TextView
+        android:id="@+id/date_textView"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:fontFamily="@font/rokkitt_bold"
+        android:singleLine="true"
+        android:textColor="@color/coin_header"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/open_textView"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/rokkitt_regular"
+        android:singleLine="true"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/high_textView"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/rokkitt_regular"
+        android:singleLine="true"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/low_textView"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/rokkitt_regular"
+        android:singleLine="true"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/close_textView"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/rokkitt_bold"
+        android:singleLine="true"
+        android:textSize="@dimen/sp14" />
+</LinearLayout>

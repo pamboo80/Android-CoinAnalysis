@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#34495e</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#962f98</color>
+
+    <color name="holo_green_dark">#ff669900</color>
+    <color name="searchTextColor">#a1b2c2</color>
+    <color name="filterBackground">#fafafa</color>
+
+    <color name="start_color">#CE2674</color>
+    <color name="end_color">#962F98</color>
+    <color name="darkish_pink">#ce2674</color>
+    <color name="textColor">#172c41</color>
+    <color name="white">#ffffff</color>
+    <color name="white_with_opacity">#ccffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#EC2228</color>
+    <color name="green">#33A318</color>
+    <color name="coin_header">#962f98</color>
+    <color name="chat_date_header">#f9e7f8</color>
+    <color name="tab_indicator_color">#ffff8d</color>
+    <color name="gray">#8d8d8d</color>
+    <color name="hint">#BFffffff</color>
+    <color name="yellow">#ffc200</color>
+    <color name="dark_yellow">#ae6e05</color>
+    <color name="divider_line_color">#d3dbe3</color>
+    <color name="sender_text_background">#f8f8f8</color>
+
+</resources>

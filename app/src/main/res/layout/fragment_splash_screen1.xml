@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_vertical"
+    android:orientation="vertical"
+    tools:context="bangbit.in.coinanalysis.SplashScreenFragment.SplashScreen1Fragment">
+
+    <TextView
+        android:id="@+id/predict_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp54"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/sp24"
+        android:textColor="@color/white"
+        android:fontFamily="@font/rokkitt_bold"
+        android:text="@string/welcome_to_coinanalysis"/>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp4"
+        android:layout_below="@id/predict_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp9"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/white_corner_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:layout_above="@id/detail_text">
+
+        <ImageView
+            android:id="@+id/center_image_analysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/analysis"
+            android:layout_marginTop="@dimen/dp83"/>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/detail_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/get_started"
+        android:layout_marginLeft="@dimen/dp24"
+        android:layout_marginRight="@dimen/dp24"
+        android:layout_marginBottom="@dimen/dp35"
+        android:lineSpacingExtra="@dimen/sp4"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/rokkitt_regular"
+        android:text="This app will help you in identifying the best performing cryptocurrencies in the market in which you can invest and get maximum return. "/>
+
+    <TextView
+        android:id="@+id/get_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp50"
+        android:layout_marginRight="@dimen/dp50"
+        android:layout_marginBottom="@dimen/dp40"
+        android:padding="@dimen/dp8"
+        android:lineSpacingExtra="@dimen/sp4"
+        android:gravity="center_horizontal"
+        android:background="@drawable/white_corner_bg"
+        android:textSize="14sp"
+        android:textColor="@color/darkish_pink"
+        android:fontFamily="@font/rokkitt_bold"
+        android:text="@string/let_s_get_started"/>
+
+</RelativeLayout>

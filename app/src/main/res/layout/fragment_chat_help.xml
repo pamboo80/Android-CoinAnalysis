@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white"
+    android:scrollbarThumbVertical="@null"
+    tools:context=".Chat.ChatDetail.ChatHelpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/chat_help_inside_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp16"
+            android:text="I am your crypto AI chatbot assistance to answer your cryptocurrencies related questions." />
+
+        <TextView
+            style="@style/chat_help_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_horizontal"
+            android:text="Hints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_circle"
+                android:text="Tap on the AI chatbot response for more detailed view of the data." />
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_circle"
+                android:text="All the price data are displayed as per your default fiat currency selection. This can be changed in the App Settings anytime." />
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_circle"
+                android:text="Below questions are the sample questions for user understanding and it is not limited to any questions related for buying these crypto coins." />
+        </LinearLayout>
+
+        <TextView
+            style="@style/chat_help_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_horizontal"
+            android:text="General Questions" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_help_filled_circle"
+                android:textIsSelectable="true"
+                android:text="What is the price of Bitcoin today?" />
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_help_filled_circle"
+                android:textIsSelectable="true"
+                android:text="Show me the chart for Bitcoin." />
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_help_filled_circle"
+                android:textIsSelectable="true"
+                android:text="Past 10 days historical data of Bitcoin." />
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_help_filled_circle"
+                android:textIsSelectable="true"
+                android:text="Where can I buy Bitcoin?" />
+
+            <!--<TextView-->
+                <!--style="@style/chat_help_inside_content"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawablePadding="@dimen/dp16"-->
+                <!--android:drawableStart="@drawable/chat_help_filled_circle"-->
+                <!--android:text="Where can I buy bitcoin cheaper" />-->
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/chat_help_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_horizontal"
+            android:text="Trading Related Questions" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_help_filled_circle"
+                android:textIsSelectable="true"
+                android:text="What coins are doing best past 1 month?" />
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_help_filled_circle"
+                android:textIsSelectable="true"
+                android:text="What coins are listed 10 times profit in 2018?" />
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_help_filled_circle"
+                android:textIsSelectable="true"
+                android:text="For 100 USD how much Bitcoins I will get? (OR) 100 USD in BTC" />
+
+            <TextView
+                style="@style/chat_help_inside_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp16"
+                android:drawableStart="@drawable/chat_help_filled_circle"
+                android:textIsSelectable="true"
+                android:text="How much is 0.5 Bitcoin in euros? (OR) 0.5 BTC in EUR" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

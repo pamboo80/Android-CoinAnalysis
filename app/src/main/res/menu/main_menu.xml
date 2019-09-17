@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <!--<item android:id="@+id/exchange"-->
+            <!--android:icon="@drawable/ic_exchange"-->
+            <!--android:title="@string/exchange" />-->
+        <!--<item android:id="@+id/prediction"-->
+            <!--android:icon="@drawable/ic_analyze"-->
+            <!--android:title="@string/prediction" />-->
+        <!--<item-->
+            <!--android:id="@+id/action_investment"-->
+            <!--android:title="@string/myInvestment"-->
+            <!--android:icon="@drawable/my_investment"/>-->
+        <item
+            android:id="@+id/action_exchange"
+            android:title="@string/exchange"
+            android:icon="@drawable/menu_exchange"/>
+        <item
+            android:id="@+id/action_setting"
+            android:title="@string/setting"
+            android:icon="@drawable/ic_action_settings"/>
+
+    </group>
+
+
+</menu>

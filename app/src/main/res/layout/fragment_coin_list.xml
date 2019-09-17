@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bangbit.in.coinanalysis.MainActivity.CoinListFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_coin_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fafafa"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <TextView
+        android:id="@+id/textView_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        style="@style/bold_14_pink"
+        android:visibility="gone"
+        android:gravity="center" />
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progress_bar"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_centerVertical="true" />-->
+
+</RelativeLayout>

@@ -1,0 +1,280 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dp16"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingBottom="@dimen/dp16">
+
+        <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="@dimen/dp32"
+            android:layout_height="@dimen/dp32"
+            android:layout_marginEnd="@dimen/dp12"
+            android:background="@drawable/robot" />
+
+        <RelativeLayout
+            style="@style/regular_16sp_textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/userImageView"
+            android:background="@drawable/pink_round_border"
+            android:paddingBottom="8dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/coinImageView"
+                android:layout_width="@dimen/dp18"
+                android:layout_height="@dimen/dp18"
+                android:layout_marginEnd="@dimen/dp12"
+                />
+
+            <TextView
+                android:id="@+id/textCoinName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/coinImageView"
+                android:text="Bitcoin (BTC) " />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/detailTextView"
+        style="@style/bold_14_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textHolder"
+        android:background="@drawable/gradient_horizontal"
+        android:paddingBottom="@dimen/dp8"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingRight="@dimen/dp16"
+        android:paddingTop="@dimen/dp8"
+        android:text="Details" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    android:id="@+id/price_lable_textView"
+                    style="@style/bold_14_pink"
+                    android:text="@string/price_usd" />
+
+                <TextView
+                    android:id="@+id/price_usd"
+                    style="@style/bold_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Price [BTC] :" />
+
+                <TextView
+                    android:id="@+id/price_btc"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="24 Hrs Volume :" />
+
+                <TextView
+                    android:id="@+id/hour_24_volume"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Market Cap :" />
+
+                <TextView
+                    android:id="@+id/mcap"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Available Supply :" />
+
+                <TextView
+                    android:id="@+id/available_supply"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Total Supply :" />
+
+                <TextView
+                    android:id="@+id/total_supply"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Max Supply :" />
+
+                <TextView
+                    android:id="@+id/max_supply"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Change 1 Hr :" />
+
+                <TextView
+                    android:id="@+id/change_1_hour"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Change 24 Hrs :" />
+
+                <TextView
+                    android:id="@+id/change_24_hour"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Change 7 Days :" />
+
+                <TextView
+                    android:id="@+id/change_7_days"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Rank :" />
+
+                <TextView
+                    android:id="@+id/rank"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16">
+
+                <TextView
+                    style="@style/bold_14_pink"
+                    android:text="Last Updated On :" />
+
+                <TextView
+                    android:id="@+id/last_updated"
+                    style="@style/regular_14_textcolor"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="NA" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,217 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="bangbit.in.coinanalysis.MyInvestmentFragment.MyInvestmentFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="bangbit.in.coinanalysis.MyInvestmentFragment.MyInvestmentFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                android:id="@+id/textView_total_market_value"
+                style="@style/bold_14_pink"
+                android:text="Total Investment Value" />
+
+            <TextView
+                android:id="@+id/textView_my_gain"
+                style="@style/bold_14_pink"
+                android:layout_alignParentRight="true"
+                android:text="My Gain/Loss" />
+
+            <TextView
+                android:id="@+id/textView_total_market_value_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/textView_total_market_value"
+                android:layout_toLeftOf="@id/textView_gain_loss"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/rokkitt_bold"
+                tools:text="$0.00"
+                android:singleLine="true"
+                android:textSize="@dimen/sp24" />
+
+            <TextView
+                android:id="@+id/textView_gain_loss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/textView_my_gain"
+                android:textColor="@color/green"
+                android:fontFamily="@font/rokkitt_bold"
+                android:textSize="@dimen/sp24"
+                android:text="0.00%"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_total_market_value_usd"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/current_price_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rokkitt_bold"
+                        android:text="Current Price : "
+                        android:gravity="bottom"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/textView_current_price_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="NA"
+                        android:textSize="@dimen/sp12" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    >
+                    <TextView
+                        android:id="@+id/total_cost_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rokkitt_bold"
+                        android:text="Total Cost : "
+                        android:gravity="bottom"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/textView_total_bought_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="NA"
+                        android:textSize="@dimen/sp12"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_horizontal"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingEnd="@dimen/dp16"
+            android:paddingStart="@dimen/dp16"
+            android:paddingTop="@dimen/dp8"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/quantity_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="Quantity"
+                android:textColor="@color/white"
+                android:drawableRight="@drawable/up_arrow"
+                android:textSize="@dimen/sp14" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1.2"
+                android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/bought_price_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt_bold"
+                android:text="Bought Price"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/dp16"
+                android:textSize="@dimen/sp14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.8"
+                android:gravity="right"
+                android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/cost_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt_bold"
+                android:gravity="right"
+                android:text="Cost"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/no_investment_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp30"
+            style="@style/bold_14_pink"
+            android:text="@string/no_investment_available"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/investment_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="@dimen/dp48"
+        android:layout_height="@dimen/dp48"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/plus_icon"
+        android:layout_gravity="bottom|right"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_margin="@dimen/dp24" />
+</android.support.design.widget.CoordinatorLayout>

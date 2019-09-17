@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bangbit.in.coinanalysis.Setting.SettingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@drawable/gradient_horizontal"
+        android:elevation="@dimen/dp2"
+        app:contentInsetStart="@dimen/dp0"
+        app:titleTextAppearance="@style/ToolbarTextAppearance.Title">
+
+        <ImageView
+            android:id="@+id/back_imageView"
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@drawable/circuler_ripple"
+            android:padding="@dimen/dp16"
+            android:src="?attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp48"
+            android:singleLine="true"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp24" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar"></FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp16"
+    android:weightSum="3">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/coin_name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_bold"
+                android:textColor="@color/coin_header"
+                android:textSize="@dimen/sp14"
+                tools:text="BTC" />
+
+            <ImageView
+                android:id="@+id/coin_ImageView"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_regular"
+                android:text="Quantity"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/price_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/rokkitt_regular"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/sp14"
+                tools:text="$0.00" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.15"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp32">
+
+        <TextView
+            android:id="@+id/cost_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rokkitt_regular"
+            android:text="Total Current Price"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:id="@+id/coin_count_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rokkitt_bold"
+            android:text="TotalQuantity"
+            android:textColor="@color/textColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.15"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bought_price_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rokkitt_regular"
+            android:text="Cost"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:id="@+id/profit_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rokkitt_regular"
+            android:text="Profit"
+            android:textColor="@color/textColor" />
+    </LinearLayout>
+
+</LinearLayout>
